@@ -10,14 +10,12 @@ public class TestSortingMethods {
 
     @Test
     public void testBubbleUp(){ 
-        int[] array = new int[] {5, 5, 7, 3, 2, 1};
-        int[] result = new int[] {1, 2, 3, 5, 5, 7};
+        int[] array = new int[] {3, 5, 5, 2, 1};
         List<Integer> list = new ArrayList<Integer>();
         list.add(1);
         list.add(2);
         list.add(3);
         list.add(5);
-        list.add(7);
-        assertEquals(result, sorting.BubbleUp(array));
+        assertEquals(list, sorting.BubbleUp(array));
     }
 }
