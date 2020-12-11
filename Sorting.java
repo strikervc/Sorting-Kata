@@ -36,12 +36,25 @@ public class Sorting {
         for (int i = 0; i < array.length; i++) {
             result.add(array[i]);
         }
+        
+        return result;
+
+    }
+     
+    public static List<Integer> EliminateDuplicates(List<Integer> list){
+        List<Integer> result = list;
+        for (int i = 0; i < result.size() - 1; i++) {
+            if(result.toArray()[i] == result.toArray()[i + 1]){
+                result.remove(i);
+            }
+        }
 
         for(int x: result){
             System.out.println(x);
         }
         
         return result;
-
     }
+
 }
+

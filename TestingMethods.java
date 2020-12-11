@@ -27,4 +27,15 @@ public class TestingMethods {
         String[] array = {"Uno", "Dos"};
         assertEquals("Esto es un string", Sorting.strValidation(array));
     }
+
+
+    @Test
+    public void testEliminateDuplicates(){
+        int[] array = new int[] {33, 4, 4, 1};
+        List<Integer> output= new ArrayList<Integer>();
+        output.add(1);
+        output.add(4);
+        output.add(33);
+        assertEquals(output, Sorting.EliminateDuplicates(Sorting.BubbleUp(array)));
+    }
 }
