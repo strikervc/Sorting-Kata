@@ -1,3 +1,6 @@
+import static org.junit.Assert.assertEquals;
+
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,7 +17,14 @@ public class TestingMethods {
         List<Integer> list = new ArrayList<Integer>();
         list.add(1);
         list.add(4);
+        list.add(4);
         list.add(33);
         assertEquals(list, Sorting.BubbleUp(array));
+    }
+
+    @Test
+    public void testStrValidation(){
+        String[] array = {"Uno", "Dos"};
+        assertEquals("Esto es un string", Sorting.strValidation(array));
     }
 }
